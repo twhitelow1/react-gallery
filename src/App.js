@@ -3,6 +3,7 @@ import Searchbar from './components/Searchbar'
 import { Component } from 'react';
 import Navigation from './components/Navigation';
 import Results from './components/Results';
+import apiKey from './config';
 
 class App extends Component {
   render() {
