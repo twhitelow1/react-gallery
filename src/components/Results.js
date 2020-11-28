@@ -8,14 +8,20 @@ const photos = [
   "https://farm5.staticflickr.com/4425/36337012384_ba3365621e.jpg",
 ]
 
+const listPhotos = photos.map((url) =>
+  <li>
+    <Photo url={url} />
+  </li>
+);
+
 class Results extends Component {
   render() {
     return (
       <>
-        <div class="photo-container">
+        <div className="photo-container">
           <h2>Results</h2>
           <ul>
-            <Photo />
+            {listPhotos}
           </ul>
         </div>
       </>
