@@ -1,19 +1,20 @@
 import './App.css';
-import Searchbar from './components/Searchbar'
+import Header from './components/Header'
 import { Component } from 'react';
-import Navigation from './components/Navigation';
-import Results from './components/Results';
 import apiKey from './config';
+import { Route, BrowserRouter } from 'react-router-dom';
+import Home from './components/Home';
 
 class App extends Component {
   render() {
     return (
       <>
-        <div class="container">
-          <Searchbar />
-          <Navigation />
-          <Results />
-        </div>
+        <BrowserRouter>
+          <div className="container">
+            <Header />
+            <Route path="/" component={Home} />
+          </div>
+        </BrowserRouter>
       </>
     );
   }
