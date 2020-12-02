@@ -9,7 +9,6 @@ function Navigation() {
           <li><NavLink to='/potter'>Harry Potter</NavLink></li>
           <li><NavLink to='/starwars'>Star Wars</NavLink></li>
           <li><NavLink to='/marvel'>Marvel</NavLink></li>
-          <li><NavLink to='/the100'>The 100</NavLink></li>
         </ul>
       </nav>
     </>

@@ -1,31 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Photo from './Photo';
 
-function Results() {
+class Results extends Component {
+  // console.log(`results: ${props.results.photos['photo'][0].id}`);
+  render() {
+    const p = this.props.photos;
 
-  const photos = [
-    "https://farm5.staticflickr.com/4334/37032996241_4c16a9b530.jpg",
-    "https://farm5.staticflickr.com/4342/36338751244_316b6ee54b.jpg",
-    "https://farm5.staticflickr.com/4343/37175099045_0d3a249629.jpg",
-    "https://farm5.staticflickr.com/4425/36337012384_ba3365621e.jpg",
-  ]
+    const photoList = p.map((photo, index) =>
+      <li>
+        <Photo url={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id} />
+      </li>
+    );
 
-  const listPhotos = photos.map((url) =>
-    <li>
-      <Photo url={url} />
-    </li>
-  );
+    console.log(`data: ${p}`);
 
-  return (
-    <>
-      <div className="photo-container">
-        <h2>Results</h2>
-        <ul>
-          {listPhotos}
-        </ul>
-      </div>
-    </>
-  );
+    return (
+      <>
+        <div className="photo-container">
+          <h2>Results</h2>
+          <ul>
+            {photoList}
+          </ul>
+        </div>
+      </>
+    );
+  }
 }
 
 export default Results;
