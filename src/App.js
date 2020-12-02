@@ -17,7 +17,7 @@ class App extends Component {
         <BrowserRouter>
           <div className="container">
             <Switch>
-              <Route exact path="/" render={() => <Home apiKey={apiKey} />} />
+              <Route exact path="/" render={(props) => <Home apiKey={apiKey} {...props} />} />
               <Route path="/:search" render={(props) => <Home apiKey={apiKey} {...props} />} />
               <Route component={NotFound} />
             </Switch>
