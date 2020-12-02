@@ -16,7 +16,6 @@ class App extends Component {
       <>
         <BrowserRouter>
           <div className="container">
-            <Header />
             <Switch>
               <Route exact path="/" render={() => <Home apiKey={apiKey} />} />
               <Route path="/:search" render={(props) => <Home apiKey={apiKey} {...props} />} />

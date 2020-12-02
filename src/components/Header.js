@@ -1,10 +1,10 @@
 import Searchbar from './Searchbar';
 import Navigation from './Navigation';
 
-function Header() {
+function Header(props) {
   return (
     <>
-      <Searchbar />
+      <Searchbar handleSearch={props.handleSearch} />
       <Navigation />
     </>
   )
