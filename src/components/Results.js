@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Photo from './Photo';
+import NotFound from './NotFound';
 
 class Results extends Component {
   // console.log(`results: ${props.results.photos['photo'][0].id}`);
@@ -13,7 +14,9 @@ class Results extends Component {
     );
 
     console.log(`data: ${p}`);
-
+    if (p.length <= 0) {
+      return <NotFound />;
+    }
     return (
       <>
         <div className="photo-container">

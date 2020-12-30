@@ -18,6 +18,9 @@ class App extends Component {
           <div className="container">
             <Switch>
               <Route exact path="/" render={(props) => <Home apiKey={apiKey} {...props} />} />
+              <Route path="/harry%20potter" render={(props) => <Home apiKey={apiKey} {...props} />} />
+              <Route path="/star%20wars" render={(props) => <Home apiKey={apiKey} {...props} />} />
+              <Route path="/marvel%20heroes" render={(props) => <Home apiKey={apiKey} {...props} />} />
               <Route path="/:search" render={(props) => <Home apiKey={apiKey} {...props} />} />
               <Route component={NotFound} />
             </Switch>
